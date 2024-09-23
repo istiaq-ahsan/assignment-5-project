@@ -38,7 +38,7 @@
 
             <div class="navbar-end">
 
-                <p class="font-bold text-xl">🪙<span>5500</span> BDT</p>
+                <p class="font-bold text-xl">🪙<span id="initial-balance">5500</span> BDT</p>
 
             </div>
 
@@ -49,11 +49,13 @@
 
         <section class="mt-12">
             <div class="flex justify-center items-center gap-5">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-yellow-300 ">Donation</button>
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline border-gray-500 ">History</button>
+                <button id="show-donation-page"
+                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-yellow-300 ">Donation</button>
+                <button id="show-history-page"
+                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline border-gray-500 ">History</button>
             </div>
         </section>
-        <section class="">
+        <section id="donation-page" class="">
             <section>
                 <div
                     class="card card-side bg-base-100 border border-gray-400 w-3/4 mx-auto mt-12 flex flex-col lg:flex-row">
@@ -64,7 +66,7 @@
                     </div>
                     <div class="card-body w-full">
                         <div class="bg-gray-200 w-fit p-2 rounded-xl">
-                            <p class="text-xl">🪙<span>0</span> BDT</p>
+                            <p class="text-xl">🪙<span id="initial-total-1">0</span> BDT</p>
                         </div>
                         <div>
                             <h1 class="font-bold text-lg">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -76,14 +78,15 @@
                                 efforts
                                 and making a positive impact on the lives of those in need.</p>
                         </div>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="input-add-money" type="number" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
                         <div>
 
 
                             <!-- Open the modal using ID.showModal() method -->
 
 
-                            <button class="btn w-full bg-yellow-300 font-semibold text-lg"
+                            <button id="btn-add-money" class="btn w-full bg-yellow-300 font-semibold text-lg"
                                 onclick="my_modal_5.showModal()">Donate Now</button>
                             <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box text-center">
@@ -116,7 +119,7 @@
                     </div>
                     <div class="card-body w-full">
                         <div class="bg-gray-200 w-fit p-2 rounded-xl">
-                            <p class="text-xl">🪙<span>0</span> BDT</p>
+                            <p class="text-xl">🪙<span id="initial-total-2">600</span> BDT</p>
                         </div>
                         <div>
                             <h1 class="font-bold text-lg">Donate for Flood Relief in Feni,Bangladesh</h1>
@@ -130,14 +133,15 @@
                                 in
                                 urgent need.</p>
                         </div>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="input-add-money-2" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
                         <div>
 
 
                             <!-- Open the modal using ID.showModal() method -->
 
 
-                            <button class="btn w-full bg-yellow-300 font-semibold text-lg"
+                            <button id="btn-add-money-2" class="btn w-full bg-yellow-300 font-semibold text-lg"
                                 onclick="my_modal_5.showModal()">Donate Now</button>
                             <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box text-center">
@@ -170,7 +174,7 @@
                     </div>
                     <div class="card-body w-full">
                         <div class="bg-gray-200 w-fit p-2 rounded-xl">
-                            <p class="text-xl">🪙<span>0</span> BDT</p>
+                            <p class="text-xl">🪙<span id="initial-total-3">2400</span> BDT</p>
                         </div>
                         <div>
                             <h1 class="font-bold text-lg">Aid for Injured in the Quota Movement</h1>
@@ -184,14 +188,15 @@
                                 need.
                             </p>
                         </div>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="input-add-money-3" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
                         <div>
 
 
                             <!-- Open the modal using ID.showModal() method -->
 
 
-                            <button class="btn w-full bg-yellow-300 font-semibold text-lg"
+                            <button id="btn-add-money-3" class="btn w-full bg-yellow-300 font-semibold text-lg"
                                 onclick="my_modal_5.showModal()">Donate Now</button>
                             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box text-center">
@@ -214,22 +219,22 @@
                 </div>
             </section>
         </section>
-        <section class="mt-12 space-y-5 ">
-            <div class="w-4/5 mx-auto border border-gray-300 h-28 rounded-xl">
+        <section id="history-page" class="mt-12 space-y-5 hidden ">
+            <div id="transaction-container" class="">
             </div>
-            <div class="w-4/5 mx-auto border border-gray-300 h-28 rounded-xl">
-            </div>
-            <div class="w-4/5 mx-auto border border-gray-300 h-28 rounded-xl">
-            </div>
+
         </section>
 
     </main>
-    <footer class="h-24 w-full bg-gray-300 mt-12">
+    <footer class="h-32 w-full bg-gray-300 mt-12">
     </footer>
 
 
 
     <script src="./js/index.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/donateMoney.js"></script>
+    <script src="./js/feautures.js"></script>
 </body>
 
 </html>
