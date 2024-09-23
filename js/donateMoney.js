@@ -16,7 +16,7 @@ document.getElementById("btn-add-money").addEventListener("click", function (eve
     document.getElementById("initial-total-1").innerText = finalTotalNoakhali;
 
     //add to transaction history------------------------------
-    const historyItem = document.createElement("div");
+    let historyItem = document.createElement("div");
     historyItem.className = "w-4/5 mx-auto border border-gray-300 h-28 rounded-xl my-3"
     historyItem.innerHTML =
         `<p class="text-xl font-bold m-5 ">
@@ -48,7 +48,18 @@ document.getElementById("btn-add-money-2").addEventListener("click", function (e
     document.getElementById("initial-balance").innerText = newBalance;
     document.getElementById("initial-total-2").innerText = finalTotalFeni;
 
+    //add to transaction history------------------------------
+    let historyItem = document.createElement("div");
+    historyItem.className = "w-4/5 mx-auto border border-gray-300 h-28 rounded-xl my-3"
+    historyItem.innerHTML =
+        `<p class="text-xl font-bold m-5 ">
+         ${addMoneyFeni} Taka is Donated for flood relief at Feni, Bangladesh
+    </p>
+    <p class="text-lg m-5">
+     Date: ${new Date().toString()}
+    </p>`;
 
+    document.getElementById("transaction-container").appendChild(historyItem);
 
 })
 
@@ -61,7 +72,7 @@ document.getElementById("btn-add-money-3").addEventListener("click", function (e
     const addMoneyQuota = getInputFiledValueById("input-add-money-3");
 
     let initialBalance = getTextFieldById("initial-balance");
-    const initialTotalQuota = getTextFieldById("initial-total-2");
+    const initialTotalQuota = getTextFieldById("initial-total-3");
 
     let newBalance = initialBalance - addMoneyQuota;
     const finalTotalQuota = initialTotalQuota + addMoneyQuota;
@@ -70,7 +81,18 @@ document.getElementById("btn-add-money-3").addEventListener("click", function (e
     document.getElementById("initial-balance").innerText = newBalance;
     document.getElementById("initial-total-3").innerText = finalTotalQuota;
 
+    //add to transaction history------------------------------
+    let historyItem = document.createElement("div");
+    historyItem.className = "w-4/5 mx-auto border border-gray-300 h-28 rounded-xl my-3"
+    historyItem.innerHTML =
+        `<p class="text-xl font-bold m-5 ">
+         ${addMoneyQuota} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+    </p>
+    <p class="text-lg m-5">
+     Date: ${new Date().toString()}
+    </p>`;
 
+    document.getElementById("transaction-container").appendChild(historyItem);
 
 })
 
